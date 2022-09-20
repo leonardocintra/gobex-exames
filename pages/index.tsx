@@ -1,8 +1,40 @@
 import type { NextPage } from 'next'
 import 'bootstrap/dist/css/bootstrap.css';
 import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link';
 
 const Home: NextPage = () => {
+
+  function imagemHeader() {
+    return (
+      <>
+        <Image src="/favicon.ico" alt="Laboratorio" width={40} height={32} className="me-2" />
+        <span className="fs-4">Gobex Exames</span>
+      </>
+    )
+  }
+
+  function linkHeader() {
+    return (
+      <Link href={"/"} className="d-flex align-items-center text-dark text-decoration-none">
+        {imagemHeader()}
+      </Link>
+    )
+  }
+
+  function navHeader() {
+    return (
+      <div className="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        {linkHeader()}
+        <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a className="me-3 py-2 text-dark text-decoration-none" href="#divExames">Exames</a>
+          <a className="me-3 py-2 text-dark text-decoration-none" href="#divContato">Contato</a>
+        </nav>
+      </div>
+    )
+  }
+
   return (
     <div>
       <Head>
@@ -15,19 +47,12 @@ const Home: NextPage = () => {
       </Head>
       <div className="container py-3">
         <header>
-          <div className="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-            <a href="/" className="d-flex align-items-center text-dark text-decoration-none">
-              <img src="/favicon.ico" alt="Laboratorio" width="40" height="32" className="me-2" />
-              <span className="fs-4">Gobex Exames</span>
-            </a>
-            <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-              <a className="me-3 py-2 text-dark text-decoration-none" href="#divExames">Exames</a>
-              <a className="me-3 py-2 text-dark text-decoration-none" href="#divContato">Contato</a>
-            </nav>
-          </div>
+
+          {navHeader()}
+
 
           <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <img className="logo-gobolex" src="img/gobex.png" width="390px" alt="Gobex Logo" />
+            <Image className="logo-gobolex" src="/img/gobex.png" width={390} height={230} alt="Gobex Logo" />
 
             <p className="fs-5 text-muted text-center">O Gobex é um laboratório de exames citológicos que emprega as
               mais modernas
@@ -49,7 +74,7 @@ const Home: NextPage = () => {
           <div id="divExames" className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col">
               <div className="card h-100">
-                <img src="img/1.png" className="card-img-top" alt="..." />
+                <Image src="/img/1.png" className="card-img-top" alt="..." width={294} height={294} />
                 <div className="card-body">
                   <h5 className="card-title text-center">Teste Nasal COVID-19</h5>
                 </div>
@@ -57,7 +82,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src="img/2.png" className="card-img-top" alt="..." />
+                <Image src="/img/2.png" className="card-img-top" alt="..." width={294} height={294} />
                 <div className="card-body">
                   <h5 className="card-title text-center">Hemograma</h5>
                 </div>
@@ -65,7 +90,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src="img/3.png" className="card-img-top" alt="..." />
+                <Image src="/img/3.png" className="card-img-top" alt="..." width={294} height={294} />
                 <div className="card-body">
                   <h5 className="card-title text-center">PCR ultrassensivel</h5>
                 </div>
@@ -73,7 +98,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src="img/4.png" className="card-img-top" alt="..." />
+                <Image src="/img/4.png" className="card-img-top" alt="..." width={294} height={294} />
                 <div className="card-body">
                   <h5 className="card-title text-center">Ferritina</h5>
                 </div>
@@ -81,7 +106,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src="img/5.png" className="card-img-top" alt="..." />
+                <Image src="/img/5.png" className="card-img-top" alt="..." width={294} height={294} />
                 <div className="card-body">
                   <h5 className="card-title text-center">TGO</h5>
                 </div>
@@ -89,9 +114,9 @@ const Home: NextPage = () => {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src="img/6.png" className="card-img-top" alt="..." />
+                <Image src="/img/6.png" className="card-img-top" alt="..." width={294} height={294} />
                 <div className="card-body">
-                  <h5 className="card-title text-center">D'Dímero</h5>
+                  <h5 className="card-title text-center">D&apos; Dímero</h5>
                 </div>
               </div>
             </div>
@@ -120,7 +145,7 @@ const Home: NextPage = () => {
         <footer className="pt-4 my-md-5 pt-md-5 border-top">
           <div className="row">
             <div className="col-12 col-md text-center">
-              <img className="mb-2" src="/favicon.ico" alt="" width="24" height="19" />
+              <Image className="mb-2" src="/favicon.ico" alt="" width={40} height={40} />
               <small className="d-block mb-3 text-muted">&copy; 2021–2022 - Desenvolvido por Leonardo Cintra -
                 leonardo.ncintra@outlook.com</small>
             </div>
