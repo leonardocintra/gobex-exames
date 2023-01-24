@@ -146,7 +146,7 @@ const Home: NextPage = () => {
           <div className="row">
             <div className="col-12 col-md text-center">
               <Image className="mb-2" src="/favicon.ico" alt="" width={40} height={40} />
-              <small className="d-block mb-3 text-muted">&copy; 2021–2022 - Desenvolvido por Leonardo Cintra -
+              <small className="d-block mb-3 text-muted">&copy; 2021–2023 - Desenvolvido por Leonardo Cintra -
                 leonardo.ncintra@outlook.com</small>
             </div>
           </div>
