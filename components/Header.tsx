@@ -20,7 +20,7 @@ export default function Header() {
           <span className="ml-3 text-xl">Gobex Exames</span>
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center justify-center text-2xl gap-3">
-          <Link href={"#divExames"} className="mr-5 hover:text-gray-900">
+          <Link href={"#divExame"} className="mr-5 hover:text-gray-900">
             Exames
           </Link>
           <Link href={"#divContato"} className="mr-5 hover:text-gray-900">
